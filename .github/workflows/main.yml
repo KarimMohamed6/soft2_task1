@@ -1,1 +1,21 @@
+on:
+  push:
+    branches:
+      - master
 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: "Login to docker hub"
+        run: docker login --username KarimMohamed22 --password KM22.Docker
+
+      - name: "Bulding docker image"
+        run: docker build -t KarimMohamed22/myimage .
+      
+      - name: "Pushing to Docker hub"
+        run: docker push KarimMohamed22/myimage
