@@ -12,10 +12,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: "Login in docker hub"
-        run: docker login --username m2mena7med --password m2mena7med
+        run: docker login --username KarimMohamed22 --password quH63MTwJb9cVub
 
       - name: "Bulding docker image"
-        run: docker build -t m2mena7med/myimage .
+        run: docker build -t KarimMohamed22/myimage .
       
       - name: "Pushing to Docker hub"
-        run: docker push m2mena7med/myimage
+        run: docker push KarimMohamed22/myimages
