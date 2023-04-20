@@ -12,10 +12,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: "Login in docker hub"
-        run: docker login --username karimmorsy --password karimmorsy
+        run: docker login --username KarimMohamed22 --password quH63MTwJb9cVub
 
-      - name: "Bulding docker image"
-        run: docker build -t karimmorsy/myimage .
       
-      - name: "Pushing to Docker hub"
-        run: docker push karimmorsy/myimages
