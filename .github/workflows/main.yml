@@ -10,8 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: "iam karim"
-        run: ls
 
+      - name: "Login in docker hub"
+        run: docker login --username karimmohamed22 --password KM22.Docker
 
-       
+      - name: "Bulding docker image"
+        run: docker build -t karimmohamed22/myimage .
+      
+      - name: "Pushing to Docker hub"
+        run: docker push karimmohamed22/myimage
